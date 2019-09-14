@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/result_page_title"
+        android:gravity="center"
+        android:textColor="@color/colorDarkBlue"
+        android:textSize="30dp"
+        android:id="@+id/headerText"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:weightSum="5"
+        android:layout_below="@id/headerText"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:layout_weight="1"
+            android:onClick="showListView"
+            android:id="@+id/radioAll"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Right"
+            android:layout_weight="1"
+            android:onClick="showListView"
+            android:id="@+id/radioRight"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wrong"
+            android:layout_weight="1"
+            android:onClick="showListView"
+            android:id="@+id/radioWrong"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort A"
+            android:layout_weight="1"
+            android:onClick="showListView"
+            android:id="@+id/radioSortAsc"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort D"
+            android:layout_weight="1"
+            android:onClick="showListView"
+            android:id="@+id/radioSortDesc"/>
+
+
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/listView"
+
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+
+        android:layout_below="@id/radioGroup"
+
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5sp"
+
+        tools:ignore="NotSibling" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:layout_below="@id/listView"
+        android:id="@+id/showRegister">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register:"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextRegister"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/showRegister"
+        android:id="@+id/showScore">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score:"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/textViewScore"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        android:layout_below="@id/showScore"
+        android:id="@+id/btnShow"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/btnShow"
+        android:text="Back"
+        android:id="@+id/btnBack"/>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
