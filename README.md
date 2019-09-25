@@ -1,2 +1,2 @@
 # MathPuzzleAndroidProject
-A small android math puzzle project.
+A small android projeect as a simple math puzzle game.
